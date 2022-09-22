@@ -1,105 +1,92 @@
-import React, { useState } from "react";
 import Header from "./components/Header";
+import Carousel from "./components/Carousel";
 
-import Carousel from "react-bootstrap/Carousel";
-
-import styles from "../styles/home.module.css";
+import styles from "../styles/home.module.scss";
 
 export default function Home() {
-  const [index, setIndex] = useState(0);
-
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
-
   return (
-    <div>
+    <div className={styles.home}>
       <Header />
-      <section className={styles.homeBanner}>
-        <div className={styles.bannerOpacity}>
+      <section className={styles.banner}>
+        <div className={styles.opacity}>
           <h1 className="text-light text-center">
-            Soluções Completas para o Crescimento do seu Negócio
+            <span className="text-warning">Soluções</span> Completas para o
+            <span className="text-warning"> Crescimento</span> do seu
+            <span className="text-warning"> Negócio</span>
           </h1>
         </div>
       </section>
       <section className="container-fluid">
-        <div className="card my-3">
-          <div className="card-body">
-            <h5 className="card-title text-center">SEO</h5>
-            <h6 className="card-subtitle mb-2 text-muted text-center">
-              Otimização de Sites
-            </h6>
-            <p className="card-text">
-              Otimizamos o conteúdo do seu site para que consiga a posição mais
-              alta possível na página dos resultados de busca.
-            </p>
+        <div className="row">
+          <div className="col-md-4 my-2">
+            <div className="card p-2 h-100">
+              <div className={styles.trafegoPago}>
+                <h4 className="text-center">
+                  <span>Social Media</span>
+                </h4>
+                <p className="text-center">
+                  <span>Anúncios na internet</span>
+                </p>
+                <p className={styles.text}>
+                  Tráfego pago é uma ferramenta de marketing digital que
+                  possibilita alavancar os acessos ao seu site, blog ou Perfil.
+                  Por meio de anúncios em redes sociais, plataformas de busca,
+                  ele possibilita expor sua marca a mais pessoas.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="card my-3">
-          <div className="card-body">
-            <h5 className="card-title text-center">Google Ads</h5>
-            <h6 className="card-subtitle mb-2 text-muted text-center">
-              Anúncios no Google
-            </h6>
-            <p className="card-text">
-              Apareça quando seus clientes estiverem pesquisando no Google,
-              navegando na Web e assistindo vídeos no YouTube.
-            </p>
+          <div className="col-md-4 my-2">
+            <div className="card p-2 h-100">
+              <div className={styles.trafegoPago}>
+                <h4 className="text-center">
+                  <span>Gestão de Tráfego</span>
+                </h4>
+                <p className="text-center">
+                  <span>Anúncios na internet</span>
+                </p>
+                <p className={styles.text}>
+                  Tráfego pago é uma ferramenta de marketing digital que
+                  possibilita alavancar os acessos ao seu site, blog ou Perfil.
+                  Por meio de anúncios em redes sociais, plataformas de busca,
+                  ele possibilita expor sua marca a mais pessoas.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div className="card my-3">
-          <div className="card-body">
-            <h5 className="card-title text-center">Facebook e Instagram</h5>
-            <h6 className="card-subtitle mb-2 text-muted text-center">
-              Anúncios nas Redes Sociais
-            </h6>
-            <p className="card-text">
-              Apareça quando seus clientes estiverem pesquisando no Google,
-              navegando na Web e assistindo vídeos no YouTube.
-            </p>
+          <div className="col-md-4 my-2">
+            <div className="card p-2 h-100">
+              <div className={styles.trafegoPago}>
+                <h4 className="text-center">
+                  <span>Marketing de Conteúdo</span>
+                </h4>
+                <p className="text-center">
+                  <span>Anúncios na internet</span>
+                </p>
+                <p className={styles.text}>
+                  Tráfego pago é uma ferramenta de marketing digital que
+                  possibilita alavancar os acessos ao seu site, blog ou Perfil.
+                  Por meio de anúncios em redes sociais, plataformas de busca,
+                  ele possibilita expor sua marca a mais pessoas.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       <section className="container-fluid">
-        <div className="cta d-grid gap-2 py-3">
-          <a href="#" className="btn btn-lg btn-outline-success">
-            Fale com um especialista
+        <div className="py-3 text-center">
+          <a
+            href="https://api.whatsapp.com/send?phone=5531982109478"
+            className="btn btn-lg p-3 btn-success"
+          >
+            <strong>Fale com um especialista</strong>
           </a>
         </div>
       </section>
 
-      <Carousel activeIndex={index} onSelect={handleSelect} indicators={false}>
-        <Carousel.Item>
-          <img
-            className="d-block w-50 mx-auto"
-            src="google_512.png"
-            alt="Google"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-50 mx-auto"
-            src="facebook_512.png"
-            alt="Facebook"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-50 mx-auto"
-            src="instagram_512.png"
-            alt="Instagram"
-          />
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-50 mx-auto"
-            src="linkedin_512.png"
-            alt="LinkedIn"
-          />
-        </Carousel.Item>
-      </Carousel>
+      <Carousel />
 
       <section className="container-fluid">
         <h2 className="text-center py-3">

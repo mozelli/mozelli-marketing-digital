@@ -1,0 +1,58 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+// @import "bootstrap/scss/maps";
+// @import "bootstrap/scss/mixins";
+// @import "bootstrap/scss/utilities";
+
+.home {
+  .banner {
+    background-image: url("../public/bg_img_banner_home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .opacity {
+      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(10, 10, 10, 0.7);
+      padding: 2rem 1rem 2rem 1rem;
+
+      h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .trafegoPago {
+    h4 {
+      color: #666;
+
+      span {
+        color: $orange-500;
+      }
+    }
+    p {
+      color: #666;
+
+      span {
+        color: $orange-300;
+      }
+    }
+    p.text {
+      text-align: justify;
+    }
+    h5 {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: tomato;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 0.4rem 0;
+        color: #666;
+      }
+    }
+  }
+}
